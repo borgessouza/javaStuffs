@@ -15,7 +15,7 @@ public class SimpleThreads implements Runnable {
         try {
             for (int i = 0; i < this.maxTime; i++) {
                 Thread.sleep(10);
-                System.out.print(".");
+                //System.out.print(".");
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
