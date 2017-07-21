@@ -4,14 +4,32 @@
 public class Java3 {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Thread t1 = new Thread(new Test("T1"));
+        Thread t3 = new Thread(new Test("T3"));
+        Thread t4 = new Thread(new Test("T4"));
+        Thread t5 = new Thread(new Test("T5"));
+        Thread t6 = new Thread(new Test("T6"));
         Test t2 = new Test("T2");
         Thread tt2 = new Thread(t2);
 
         t1.start();
-        tt2.start();
+        //tt2.start();
+       // t3.start();
+        //t4.start();
+        //t5.start();
+       // t6.start();
+
+
+       /*while (t1.isAlive() && tt2.isAlive()) {
+           System.out.println("Not yet!!");
+          try {
+              Thread.sleep(100);
+          } catch(Exception e){
+              e.printStackTrace();
+          }
+       }*/
 
         System.out.println("Finish");
     }
